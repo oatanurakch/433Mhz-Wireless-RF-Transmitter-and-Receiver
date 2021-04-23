@@ -8,13 +8,13 @@ char keys[ROWS][COLS] = {
   {'7', '8', '9', 'C'},
   {'*', '0', '#', 'D'}
 };
-byte rowPins[ROWS] = {9, 8, 7, 6};  //ESP32 Connect Pin keypad 8, 7, 6, 5
-byte colPins[COLS] = {5, 4, 3, 2};    //ESP32 Connect Pin keypad 4, 3, 2, 1
+byte rowPins[ROWS] = {9, 8, 7, 6};  //In {} is Pin on Arduino connect pin keypad 8, 7, 6, 5
+byte colPins[COLS] = {5, 4, 3, 2};    //In {} is Pin on Arduino Connect pin keypad 4, 3, 2, 1
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
 RCSwitch mySwitch = RCSwitch();
 void setup() {
-  mySwitch.enableTransmit(12); // Using Pin #D12
+  mySwitch.enableTransmit(12); // Using Pin #D12 On Arduino
   Serial.begin(115200);
 }
 void loop() {
