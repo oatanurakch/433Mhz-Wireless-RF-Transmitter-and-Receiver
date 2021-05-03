@@ -7,7 +7,7 @@ int lcdRows = 2;
 
 LiquidCrystal_I2C lcd(0x27, lcdColumns, lcdRows);
 
-#define RXD2 0
+#define RXD2 0  //Connect D2 On Arduino Uno R3 to Pin Data on Module
 
 void setup() {
   Serial.begin(115200);
